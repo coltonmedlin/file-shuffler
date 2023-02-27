@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="22" failures="0" errors="0" time="1.8">
+  <testsuite name="all files have been shuffled" errors="0" failures="0" skipped="0" timestamp="2023-02-27T01:44:03" time="1.32" tests="4">
+    <testcase classname="all files have been shuffled resolves to true for directory with files that all begin with &quot;###-&quot;" name="all files have been shuffled resolves to true for directory with files that all begin with &quot;###-&quot;" time="0.003">
+    </testcase>
+    <testcase classname="all files have been shuffled resolves to false for files with a directory that do not all begin with &quot;###-&quot;" name="all files have been shuffled resolves to false for files with a directory that do not all begin with &quot;###-&quot;" time="0.001">
+    </testcase>
+    <testcase classname="all files have been shuffled Throws and logs an error if it is unable to read a directory" name="all files have been shuffled Throws and logs an error if it is unable to read a directory" time="0.001">
+    </testcase>
+    <testcase classname="all files have been shuffled resolves to false for an empty folder" name="all files have been shuffled resolves to false for an empty folder" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="undo" errors="0" failures="0" skipped="0" timestamp="2023-02-27T01:44:03" time="1.331" tests="5">
+    <testcase classname="undo removeFileRenames resolves when files are correctly renamed" name="undo removeFileRenames resolves when files are correctly renamed" time="0.005">
+    </testcase>
+    <testcase classname="undo removeFileRenames throws an error when rename fails" name="undo removeFileRenames throws an error when rename fails" time="0.001">
+    </testcase>
+    <testcase classname="undo undo resolves when files are properly renamed" name="undo undo resolves when files are properly renamed" time="0.001">
+    </testcase>
+    <testcase classname="undo undo rejects and logs error when rename fails" name="undo undo rejects and logs error when rename fails" time="0.001">
+    </testcase>
+    <testcase classname="undo undo rejects and logs an error when readdir fails" name="undo undo rejects and logs an error when readdir fails" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="shuffle" errors="0" failures="0" skipped="0" timestamp="2023-02-27T01:44:03" time="1.42" tests="13">
+    <testcase classname="shuffle create number array creates an array with the expected length" name="shuffle create number array creates an array with the expected length" time="0.003">
+    </testcase>
+    <testcase classname="shuffle create number array creates an array of strings with the correct number of prepended zeros" name="shuffle create number array creates an array of strings with the correct number of prepended zeros" time="0">
+    </testcase>
+    <testcase classname="shuffle shuffle array does not modify input array" name="shuffle shuffle array does not modify input array" time="0">
+    </testcase>
+    <testcase classname="shuffle shuffle array returns array in a new order" name="shuffle shuffle array returns array in a new order" time="0.001">
+    </testcase>
+    <testcase classname="shuffle shuffle array returns an array in a different order each time" name="shuffle shuffle array returns an array in a different order each time" time="0.001">
+    </testcase>
+    <testcase classname="shuffle generateFilePrepends calls createNumberArray and shuffleArray" name="shuffle generateFilePrepends calls createNumberArray and shuffleArray" time="0.001">
+    </testcase>
+    <testcase classname="shuffle generateFilePrepends returns the result of shuffle array" name="shuffle generateFilePrepends returns the result of shuffle array" time="0">
+    </testcase>
+    <testcase classname="shuffle rename files resolves when files are correctly renamed" name="shuffle rename files resolves when files are correctly renamed" time="0.001">
+    </testcase>
+    <testcase classname="shuffle rename files rejects when files fail to rename" name="shuffle rename files rejects when files fail to rename" time="0.001">
+    </testcase>
+    <testcase classname="shuffle shuffle resolves when files are properly renamed" name="shuffle shuffle resolves when files are properly renamed" time="0">
+    </testcase>
+    <testcase classname="shuffle shuffle properly filters hidden (dot prepended) files" name="shuffle shuffle properly filters hidden (dot prepended) files" time="0.001">
+    </testcase>
+    <testcase classname="shuffle shuffle rejects and logs an error when readdir fails" name="shuffle shuffle rejects and logs an error when readdir fails" time="0.001">
+    </testcase>
+    <testcase classname="shuffle shuffle rejects and logs an error when reanameFiles fails" name="shuffle shuffle rejects and logs an error when reanameFiles fails" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>
