@@ -107,7 +107,7 @@
   });
 </script>
 
-<div id="drop-container" class={isDragging ? 'dragging' : ''}{error ? 'error' : ''}{folderPath ? 'success' : ''}>
+<div id="drop-container" class="{isDragging ? 'dragging' : ''}{error ? 'error' : ''}{folderPath ? 'success' : ''}">
   <p>{folderPath ?? 'Drag and drop a folder here to shuffle contents'}</p>
 </div>
 <div class="error-text">
@@ -120,27 +120,35 @@
 
 <style lang="scss">
   #drop-container {
-    width: 100%;
-    height: 200px;
-    border: 2px dashed #ccc;
+    width: 85%;
+    height: 70vh;
+    border: 1px solid #cccccc69;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    backdrop-filter: blur(6px) brightness(90%);
+    border-radius: 10px;
 
 		.dragging {
-      background-color: #979797;
+      border: 1px solid white;
     }
 
 		.error {
-		  border-color:#dc6c27;
+		  border: 1px solid #dc6c27;
 	  }  
 
 		.success {
-		  border-color:#5adc27;
+		  border: 1px solid #5adc27;
 	  }
   }
 
 	.error-text {
-		color: #dc6c27;
+    margin-left: auto;
+    margin-right: auto;
+    p {
+      color: #dc6c27;
+    }
 	}
 </style>
