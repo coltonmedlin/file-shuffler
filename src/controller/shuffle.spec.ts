@@ -49,8 +49,8 @@ describe('shuffle', () => {
   describe('generateFilePrepends', () => {
     const numberArray = ['001', '002', '003', '004'];
     const shuffledArray = ['004', '001', '003', '002'];
-    let mockCreateNumberArray: jest.SpiedFunction<any>;
-    let mockShuffleArray: jest.SpiedFunction<any>;
+    let mockCreateNumberArray: jest.SpyInstance<any>;
+    let mockShuffleArray: jest.SpyInstance<any>;
 
     beforeEach(() => {
       mockCreateNumberArray = jest.spyOn(shuffle, 'createNumberArray')
@@ -97,8 +97,8 @@ describe('shuffle', () => {
   });
 
   describe('shuffle', () => {
-    let mockGenerateFilePrepends: jest.SpiedFunction<any>;
-    let mockRenameFiles: jest.SpiedFunction<any>;
+    let mockGenerateFilePrepends: jest.SpyInstance<any>;
+    let mockRenameFiles: jest.SpyInstance<any>;
     beforeEach(() => {
       jest.spyOn(console, 'error').mockImplementation(() => {});
       mockGenerateFilePrepends = jest.spyOn(shuffle, 'generateFilePrepends')

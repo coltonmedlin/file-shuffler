@@ -10,9 +10,20 @@
     "max-len": "off",
     "no-plusplus": "off",
     "no-console": "off",
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "import/no-extraneous-dependencies": "off"
   },
   "ignorePatterns": [
-    "*.config.js"
-  ]
+    "*.config.js",
+    "./dist/**/*",
+  ],
+  "plugins": [
+    "svelte3"
+  ],
+  "overrides": [
+    {
+      "files": ["*.svelte"],
+      "processor": "svelte3/svelte3"
+    }
+  ],
 }
