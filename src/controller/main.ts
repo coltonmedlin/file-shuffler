@@ -13,7 +13,7 @@ const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 800,
-    height: 600,
+    height: 800,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -25,7 +25,7 @@ const createWindow = () => {
   mainWindow.loadURL(production ? `File://${path.join(__dirname, '/index.html')}` : 'http://localhost:3143');
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
@@ -41,18 +41,30 @@ app.whenReady().then(() => {
   });
 
   ipcMain.handle('checkFolder', async (event: any, filePath: string): Promise<boolean> => {
-    const result = await checkFolder(filePath);
-    return result;
+    try {
+      const result = await checkFolder(filePath);
+      return result;
+    } catch (err) {
+      throw new Error(err.message);
+    }
   });
 
   ipcMain.handle('shuffle', async (event:any, filePath: string): Promise<void> => {
-    const result = await shuffle(filePath);
-    return result;
+    try {
+      const result = await shuffle(filePath);
+      return result;
+    } catch (err) {
+      throw new Error(err.message);
+    }
   });
 
   ipcMain.handle('undo', async (event: any, filePath: string): Promise<void> => {
-    const result = await undo(filePath);
-    return result;
+    try {
+      const result = await undo(filePath);
+      return result;
+    } catch (err) {
+      throw new Error(err.message);
+    }
   });
 });
 

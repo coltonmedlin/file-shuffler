@@ -121,7 +121,7 @@
 <style lang="scss">
   #drop-container {
     width: 85%;
-    height: 70vh;
+    height: 70%;
     border: 1px solid #cccccc69;
     display: flex;
     justify-content: center;

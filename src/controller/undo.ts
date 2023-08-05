@@ -22,5 +22,6 @@ export const undo = async (filePath: string): Promise<void> => {
     await removeFileRenames(filePath, files);
   } catch (err) {
     console.error(err);
+    return err;
   }
 };

@@ -46,5 +46,6 @@ export const shuffle = async (filePath: string): Promise<void> => {
     await renameFiles(filePath, files, filePrepends);
   } catch (err) {
     console.error(err);
+    return err;
   }
 };
